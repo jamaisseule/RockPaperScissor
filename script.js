@@ -69,7 +69,6 @@ $start.addEventListener('click', () => {
 });
 
 $btnReset.addEventListener('click', () => {
-    confetti.reset();
     state = '';
     currentArm = '';
     currentBotArm = '';
