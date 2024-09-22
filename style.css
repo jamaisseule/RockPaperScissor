@@ -189,9 +189,9 @@ main{
     }
 
     #ctr-arm span {
-        width: 120px; /* Thu nhỏ kích thước hình ảnh */
+        width: 120px; /* Thu nhỏ hình ảnh */
         height: 120px;
-        background-size: cover; /* Đảm bảo hình ảnh bao phủ toàn bộ vùng hiển thị */
+        background-size: cover; /* Đảm bảo hình ảnh được bao phủ toàn bộ vùng hiển thị */
     }
 
     #btn-start,
@@ -201,18 +201,9 @@ main{
     }
 
     #pvp {
-        display: flex; /* Giữ bố cục hai cột ngang */
-        flex-direction: row; /* Đặt các phần tử thành hàng */
-        align-items: center; /* Căn giữa theo chiều dọc */
-        justify-content: center; /* Căn giữa theo chiều ngang */
-        gap: 20px; /* Khoảng cách giữa các phần tử */
-        width: 100%; /* Đảm bảo khu vực chiếm toàn bộ chiều rộng */
-    }
-
-    #pvp span {
-        width: 120px; /* Thu nhỏ kích thước hình ảnh của đối thủ */
-        height: 120px;
-        background-size: cover; /* Đảm bảo hình ảnh bao phủ toàn bộ vùng hiển thị */
+        flex-direction: row; /* Giữ cho các lựa chọn nằm ngang */
+        gap: 10px;
+        justify-content: center; /* Căn giữa các lựa chọn */
     }
 
     #pvp p {
@@ -222,6 +213,5 @@ main{
     #result {
         font-size: 3rem;
         padding: 20px 50px;
-        text-align: center; /* Căn giữa văn bản kết quả */
     }
 }
