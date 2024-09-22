@@ -1,0 +1,175 @@
+@import url('http://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+
+:root {
+    --primary: #fc6304;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent; 
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(at center, #10264deb, #000);
+    color: #fafafa;
+    font-family: "Nerko One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-style: 10px;
+}
+
+h2{
+    font-size: 2.5rem;
+}
+
+main{
+    position: relative;
+}
+
+#ctr-arm{
+    display: flex;
+    gap: 16px;
+    margin: 16px 0;
+}
+
+#ctr-arm span{
+    background-size: contain;
+    background-position: center;
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+}
+
+#ctr-arm span:active{
+    transform: scale(1.1);
+}
+
+.active{
+    filter: drop-shadow(0px 0px 15px var(--primary));
+    transform: scale(1.1);
+}
+
+#rock{
+    background-image: url('http://codetheworld.io/wp-content/uploads/2024/09/stone.png');
+}
+
+#paper{
+    background-image: url('http://codetheworld.io/wp-content/uploads/2024/09/paper.png');
+}
+
+#scissor{
+    background-image: url('http://codetheworld.io/wp-content/uploads/2024/09/scissor.png');
+}
+
+#btn-start,
+#btn-reset{
+    font-family: "Nerko One", cursive;
+    font-size: 1.8rem;
+    background: var(--primary);
+    color: #fafafa;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 6px 30px;
+    border-radius: 25px;
+}
+
+#btn-start:hover,
+#btn-reset:hover{
+    transform: scale(1.2);
+    box-shadow: 4px 4px 10px #00000033;
+}
+
+#pvp{
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#pvp span {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-size: contain;
+    background-position: center;
+}
+
+#pvp p{
+    font-size: 2.5rem;
+}
+
+#btn-reset{
+    position: absolute;
+    bottom: -10%;
+}
+
+.cell{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    mask-image: linear-gradient(to bottom, 
+    #3d000000,
+    #3d0000 20%,
+    #3d0000 80%,
+    #3d000000);
+}
+
+.cell span:nth-child(1){
+    background-image: url(https://codetheworld.io/wp-content/uploads/2024/09/stone.png);
+}
+
+.cell span:nth-child(2){
+    background-image: url(https://codetheworld.io/wp-content/uploads/2024/09/paper.png);
+}
+
+.cell span:nth-child(3){
+    background-image: url(https://codetheworld.io/wp-content/uploads/2024/09/scissor.png);
+}
+
+.cell span{
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    animation: autoSlide 2s linear infinite;
+    animation-delay: calc((2s / 3) * (3 - var(--i)) 8 -1); 
+}
+
+@keyframes autoSlide {
+    to {
+        top: -200%;
+    }
+}
+
+#result {
+    position: absolute;
+    font-size: 5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 0px 0px 60px #000000,
+    0px 0px 60px #000000,
+    0px 0px 60px #000000;
+    padding: 30px 80px;
+    pointer-events: none;
+}
+
+#pvp,
+#result {
+    display: none;
+}

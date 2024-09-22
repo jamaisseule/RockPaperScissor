@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissor!!</title>
+    <link rel="icon" href="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2kxeDFjemwzMHl1cDB5NTc0MHA2YjJjazd0dHNwOGs3Z2o0dHhtdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/eltZvfFAW9f9HI1foH/giphy.webp" type="image/png">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <script src="http://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <main>
+        <section id="getReady">
+            <h2>Select Your Arm!</h2><br>
+            <div id="ctr-arm">
+                <span id="rock" class="armor"></span>
+                <span id="paper" class="armor"></span>
+                <span id="scissor" class="armor"></span>
+            </div><br>
+            <button id="btn-start">Start</button>
+        </section>
+        <section id="pvp">
+            <span id="yourArm"></span>
+            <p>VS</p>
+            <span id="botArm">
+                <div class="cell">
+                    <span style="--i:1;"></span>
+                    <span style="--i:2;"></span>
+                    <span style="--i:3;"></span>
+                </div>
+            </span><br>
+            <button id="btn-reset">Play Again</button>
+        </section>
+        <p id="result">Win</p>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
