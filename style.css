@@ -171,3 +171,46 @@ main{
 #result {
     display: none;
 }
+
+/* Cho màn hình điện thoại */
+@media (max-width: 768px) {
+    body {
+        gap: 20px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    #ctr-arm {
+        flex-direction: row; /* Giữ cho các lựa chọn nằm ngang */
+        gap: 10px;
+        justify-content: center; /* Căn giữa các lựa chọn */
+    }
+
+    #ctr-arm span {
+        width: 120px; /* Thu nhỏ hình ảnh */
+        height: 120px;
+        background-size: cover; /* Đảm bảo hình ảnh được bao phủ toàn bộ vùng hiển thị */
+    }
+
+    #btn-start,
+    #btn-reset {
+        font-size: 1.2rem;
+        padding: 5px 20px;
+    }
+
+    #pvp {
+        flex-direction: column; /* Đặt khu vực hiển thị kết quả thành cột */
+        gap: 20px;
+    }
+
+    #pvp p {
+        font-size: 1.8rem;
+    }
+
+    #result {
+        font-size: 3rem;
+        padding: 20px 50px;
+    }
+}
