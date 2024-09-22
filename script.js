@@ -63,10 +63,11 @@ $start.addEventListener('click', () => {
         $result.innerText = state;
         $result.style.display = 'inherit';
         if (state === 'WIN') {
-            confetti();
+            confetti(); // Kích hoạt confetti khi thắng
         }
     }, 2500);
 });
+
 
 $btnReset.addEventListener('click', () => {
     state = '';
@@ -80,3 +81,4 @@ $btnReset.addEventListener('click', () => {
     $result.innerText = '';
     $result.style.display = 'none';
 });
+
